@@ -63,7 +63,7 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   name: "Hernan Morantes",
-  subtitle: "La ley, bien usada, también cuida",
+  subtitle: "Litigio estratégico",
   roles: [
     "Derecho Administrativo",
     "Derecho Ambiental", 
@@ -71,7 +71,7 @@ export const heroConfig: HeroConfig = {
     "Derecho Minero-Energético",
     "Servicios Públicos",
   ],
-  backgroundImage: "/images/abogado_1_optimized.jpg",
+  backgroundImage: "/images/abogado_2.png?v=20260321",
   ctaText: "Agenda una consulta jurídica estratégica",
   ctaHref: "#contacto",
 };
@@ -103,11 +103,11 @@ export interface AboutConfig {
 
 export const aboutConfig: AboutConfig = {
   label: "Sobre Mí",
-  heading: "Convertir conflictos jurídicos complejos en decisiones claras y efectivas",
-  description: "Porque el derecho no nació para adornar estanterías, sino para ordenar el poder y proteger la vida. Defiendo personas y comunidades para que la ley deje de ser un muro y vuelva a ser puente: hacia la dignidad. En términos simples: la justicia es un servicio público, no un privilegio.",
+  heading: "Justicia con Estrategia y Propósito",
+  description: "El derecho no es para adornar estanterías. Es para ordenar el poder y proteger la vida. Convierto conflictos complejos en decisiones claras y soluciones con impacto social.",
   mission: "Brindar asesoría y defensa jurídica rigurosa para proteger los derechos de personas y comunidades, fortaleciendo el Estado de Derecho en los ámbitos administrativo, constitucional, ambiental, minero-energético y de servicios públicos, con ética, pedagogía y litigio estratégico.",
   vision: "Ser una referencia nacional e internacional en defensa jurídica de alto impacto social y ambiental, reconocida por transformar conflictos legales complejos en decisiones justas, sostenibles y comprensibles, donde el derecho no solo resuelve casos, sino mejora la vida colectiva.",
-  experienceValue: "10+",
+  experienceValue: "11+",
   experienceLabel: "Años de\nExperiencia",
   stats: [
     { value: "500+", label: "Casos Atendidos" },
@@ -167,19 +167,19 @@ export const servicesConfig: ServicesConfig = {
         "Uso de precedentes y prueba técnica",
         "Presentación rápida de acciones urgentes"
       ],
-      image: "https://images.unsplash.com/photo-1618771623063-6c3faa854a61?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/images/litigio.jpeg",
     },
     {
       iconName: "BookOpen",
       title: "Educación Legal para Comunidades y Empresas",
-      description: "Talleres y capacitaciones que empoderan sin ideologizar. Convierte el derecho en herramienta, no en amenaza.",
+      description: "Talleres y capacitaciones que empoderan.",
       features: [
         "Formación jurídica aplicada con casos reales",
         "Metodología pedagógica y ejemplos cotidianos",
         "Enfoque en derechos, deberes y mecanismos de exigibilidad",
         "Reducción de conflictos futuros"
       ],
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
+      image: "/images/educacion.png",
     },
     {
       iconName: "Shield",
@@ -187,11 +187,11 @@ export const servicesConfig: ServicesConfig = {
       description: "Defensa del territorio, el agua y el ambiente con visión constitucional y litigio estratégico.",
       features: [
         "Defensa de comunidades afectadas por proyectos extractivos",
-        "Protección de recursos naturales y medio ambiente",
+        "Protección de los ecosistemas y el ambiente",
         "Asesoría en derecho minero y energético",
         "Litigio con impacto social real"
       ],
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+      image: "/images/ambiental.jpeg",
     },
   ],
 };
@@ -358,36 +358,7 @@ export interface TestimonialsConfig {
   testimonials: TestimonialItem[];
 }
 
-export const testimonialsConfig: TestimonialsConfig = {
-  label: "Testimonios",
-  heading: "Lo que dicen quienes han confiado en mi trabajo",
-  testimonials: [
-    {
-      quote: "El doctor Morantes no solo resolvió nuestro caso, nos enseñó a entender el derecho como herramienta de empoderamiento. Su pedagogía legal es excepcional.",
-      author: "María González",
-      role: "Líder Comunitaria",
-      company: "Veeduría Ciudadana del Agua",
-      image: "/images/abogado.jpg",
-      rating: 5,
-    },
-    {
-      quote: "Profesionalismo, rigor técnico y una respuesta ágil que nos permitió actuar antes de que el daño fuera irreversible. Exactamente lo que necesitábamos.",
-      author: "Carlos Ramírez",
-      role: "Presidente",
-      company: "Junta de Acción Comunal",
-      image: "/images/abogado.jpg",
-      rating: 5,
-    },
-    {
-      quote: "Finalmente un abogado que habla claro, sin lenguaje críptico. Nos dio tranquilidad y resultados concretos en un caso que parecía perdido.",
-      author: "Ana Patricia López",
-      role: "Servidora Pública",
-      company: "Alcaldía Municipal",
-      image: "/images/abogado.jpg",
-      rating: 5,
-    },
-  ],
-};
+
 
 // ───────────────────────────────────────────────────────────────────────────
 // CONFIGURACIÓN DE LA SECCIÓN CTA (LLAMADO A LA ACCIÓN)
@@ -410,10 +381,10 @@ export const ctaConfig: CTAConfig = {
   heading: "Agenda una consulta jurídica estratégica",
   description: "Un primer paso corto, para un conflicto que ya es largo. Te ayudo a convertir problemas jurídicos complejos en decisiones claras y soluciones efectivas.",
   buttonText: "Contactar por WhatsApp",
-  buttonHref: "https://wa.me/573007506591",
+  buttonHref: "https://wa.me/573125841631",
   email: "abogadohm92@gmail.com",
-  phone: "+57 300 750 6591",
-  whatsappNumber: "573007506591",
+  phone: "+57 312 584 1631",
+  whatsappNumber: "573125841631",
   whatsappMessage: "Hola, estoy interesado en agendar una consulta jurídica estratégica. ¿Podemos hablar?",
   backgroundImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
 };
@@ -505,9 +476,9 @@ export const footerConfig: FooterConfig = {
     {
       title: "Contacto",
       links: [
-        { label: "WhatsApp", href: "https://wa.me/573007506591" },
+        { label: "WhatsApp", href: "https://wa.me/573125841631" },
         { label: "Email", href: "mailto:abogadohm92@gmail.com" },
-        { label: "Teléfono", href: "tel:+573007506591" },
+        { label: "Teléfono", href: "tel:+573125841631" },
         { label: "Agendar Consulta", href: "#contacto" },
       ],
     },

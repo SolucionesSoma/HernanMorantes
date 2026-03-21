@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import { cn } from '@/lib/utils';
 import { heroConfig } from '@/config';
 import { ArrowDown } from 'lucide-react';
@@ -12,7 +12,18 @@ export function Hero() {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [heroImageSrc, setHeroImageSrc] = useState(heroConfig.backgroundImage);
   const sectionRef = useRef<HTMLElement>(null);
+  const resolvedHeroImageSrc = useMemo(() => {
+    if (!heroImageSrc) return heroImageSrc;
+    if (heroImageSrc.startsWith('http://') || heroImageSrc.startsWith('https://') || heroImageSrc.startsWith('data:')) {
+      return heroImageSrc;
+    }
+
+    const base = import.meta.env.BASE_URL || '/';
+    const normalized = heroImageSrc.startsWith('/') ? heroImageSrc.slice(1) : heroImageSrc;
+    return `${base}${normalized}`;
+  }, [heroImageSrc]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,6 +31,11 @@ export function Hero() {
     }, 300);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    setHeroImageSrc(heroConfig.backgroundImage);
+    setImageLoaded(false);
+  }, [heroConfig.backgroundImage]);
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
     const section = e.currentTarget;
@@ -30,6 +46,11 @@ export function Hero() {
     section.style.setProperty('--mouse-x', `${x - halfBox}px`);
     section.style.setProperty('--mouse-y', `${y - halfBox}px`);
   }, []);
+
+  const handleImageError = useCallback(() => {
+    console.error(`No se pudo cargar la imagen del hero: ${resolvedHeroImageSrc}`);
+    setImageLoaded(true);
+  }, [resolvedHeroImageSrc]);
 
   return (
     <section
@@ -47,8 +68,9 @@ export function Hero() {
         )}
       >
         <img
-          src={heroConfig.backgroundImage}
+          src={resolvedHeroImageSrc}
           alt="Hero Background"
+          data-hero-src={resolvedHeroImageSrc}
           fetchPriority="high"
           decoding="async"
           className="object-contain"
@@ -59,6 +81,7 @@ export function Hero() {
             objectPosition: 'center center'
           }}
           onLoad={() => setImageLoaded(true)}
+          onError={handleImageError}
         />
       </div>
 
@@ -85,8 +108,9 @@ export function Hero() {
           }}
         >
           <img
-            src={heroConfig.backgroundImage}
+            src={resolvedHeroImageSrc}
             alt="Hero Sharp"
+            data-hero-src={resolvedHeroImageSrc}
             fetchPriority="high"
             decoding="async"
             className="object-contain"
@@ -95,6 +119,7 @@ export function Hero() {
               height: `${imageScale * 100}vh`,
               objectPosition: 'center center'
             }}
+            onError={handleImageError}
           />
         </div>
       </div>
@@ -175,26 +200,44 @@ export function Hero() {
         )}
       </div>
 
-      {/* Roles en Mobile: arriba */}
-      <div className="lg:hidden absolute top-20 left-0 right-0 z-30 flex flex-wrap justify-center gap-x-4 gap-y-1 px-4 pointer-events-none">
-        {heroConfig.roles.map((role, index) => (
-          <span
-            key={index}
+      {/* MOBILE: Roles + Subtitle agrupados arriba */}
+      <div className="lg:hidden absolute top-20 left-0 right-0 z-30 flex flex-col items-center gap-3 px-4 pointer-events-none">
+        {/* Roles */}
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
+          {heroConfig.roles.map((role, index) => (
+            <span
+              key={index}
+              className={cn(
+                'text-[10px] font-geist-mono uppercase tracking-[0.2em] text-white/60 transition-all duration-[1200ms] ease-out-quart',
+                isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+              )}
+              style={{ transitionDelay: `${800 + index * 100}ms` }}
+            >
+              {role}
+            </span>
+          ))}
+        </div>
+        
+        {/* Subtitle - pegado a los roles, no al título */}
+        {heroConfig.subtitle && (
+          <div
             className={cn(
-              'text-[10px] font-geist-mono uppercase tracking-[0.2em] text-white/60 transition-all duration-[1200ms] ease-out-quart',
+              'text-center transition-all duration-[1200ms] ease-out-quart',
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
             )}
-            style={{ transitionDelay: `${800 + index * 100}ms` }}
+            style={{ transitionDelay: '1000ms' }}
           >
-            {role}
-          </span>
-        ))}
+            <p className="text-sm text-white/80 font-light tracking-wide max-w-xs mx-auto">
+              {heroConfig.subtitle}
+            </p>
+          </div>
+        )}
       </div>
 
-      {/* Content Container */}
+      {/* Content Container - solo título y CTA */}
       <div className="relative z-30 flex flex-col items-center justify-end min-h-screen px-6 lg:px-12 pointer-events-none">
         
-        {/* Main Heading - exactamente como estaba */}
+        {/* Main Heading */}
         <div
           className={cn(
             'text-center transition-all duration-[1200ms] ease-out-quart pb-8 md:pb-12',
@@ -203,11 +246,12 @@ export function Hero() {
           style={{ transitionDelay: '600ms' }}
         >
           <h1 className="text-[clamp(3rem,12vw,12rem)] font-black text-white tracking-[-0.04em] leading-[0.85]">
+            {/*text-[#059669] */}
             {heroConfig.name}
           </h1>
         </div>
 
-        {/* CTA Button - exactamente como estaba */}
+        {/* CTA Button */}
         {heroConfig.ctaText && (
           <div
             className={cn(
@@ -226,11 +270,11 @@ export function Hero() {
           </div>
         )}
 
-        {/* Subtitle - debajo del botón CTA */}
+        {/* DESKTOP: Subtitle al final */}
         {heroConfig.subtitle && (
           <div
             className={cn(
-              'text-center transition-all duration-[1200ms] ease-out-quart pb-8',
+              'hidden lg:block text-center transition-all duration-[1200ms] ease-out-quart pb-8',
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             )}
             style={{ transitionDelay: '1000ms' }}
