@@ -37,7 +37,7 @@ export interface NavigationConfig {
 
 export const navigationConfig: NavigationConfig = {
   logo: "Hernan Morantes",
-  logoImage: "/images/logo.jpg",
+  logoImage: "/images/logo.png",
   links: [
     { label: "Inicio", href: "#inicio" },
     { label: "Sobre Mí", href: "#sobre-mi" },
@@ -256,6 +256,14 @@ export const legalKitsConfig: LegalKitsConfig = {
       image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       driveLink: "https://drive.google.com/drive/folders/1XQYBGOwpAVlXXLXLohNEvBzOEQPXolO5?usp=drive_link",
     },
+{
+  id: "kit-4",
+  title: "Protección de datos (Habeas Data)",
+  description: "Herramientas jurídicas para la protección de datos personales ante centrales de riesgo, sistema financiero, etc.",
+  category: "Derecho de Protección de Datos",
+  image: "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  driveLink: "https://drive.google.com/drive/folders/1VnM1KZXsQ7TnFPAo0beNxAd0Z0X5GAzX?usp=drive_link",
+}
   ],
   cta: {
     label: "¿Necesitas un kit específico?",
@@ -481,7 +489,7 @@ export interface FooterConfig {
 
 export const footerConfig: FooterConfig = {
   logo: "Hernan Morantes",
-  logoImage: "/images/logo.jpg",
+  logoImage: "/images/logo.png",
   description: "Defiendo personas y comunidades para que la ley deje de ser un muro y vuelva a ser puente: hacia la dignidad.",
   columns: [
     {
@@ -500,6 +508,7 @@ export const footerConfig: FooterConfig = {
         { label: "Productos Defectuosos", href: "#kits" },
         { label: "Contaminación Auditiva", href: "#kits" },
         { label: "Contaminación del Aire", href: "#kits" },
+        { label: "Protección de datos personales (habeas Data)", href: "#kits" },
       ],
     },
     {

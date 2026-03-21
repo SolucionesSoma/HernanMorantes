@@ -88,7 +88,7 @@ Para agregar un kit sobre "Derecho de Petición", copia y pega esto dentro del a
 
 Puedes usar:
 - `/images/abogado.jpg` - Imagen del abogado (por defecto)
-- `/images/logo.jpg` - Logo del bufete
+- `/images/logo.png` - Logo del bufete
 - O subir una imagen nueva a `/public/images/` y usar `/images/tu-imagen.jpg`
 
 ---

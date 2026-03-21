@@ -240,13 +240,12 @@ export function Hero() {
         {/* Main Heading */}
         <div
           className={cn(
-            'text-center transition-all duration-[1200ms] ease-out-quart pb-8 md:pb-12',
+            'text-center transition-all duration-[1200ms] ease-out-quart pb-12 md:pb-12',
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           )}
           style={{ transitionDelay: '600ms' }}
         >
           <h1 className="text-[clamp(2rem,10vw,12rem)] font-black text-white tracking-[-0.04em] leading-[0.85]">
-
             {/*text-[#059669] */}
             {heroConfig.name}
           </h1>
