@@ -71,7 +71,7 @@ export const heroConfig: HeroConfig = {
     "Derecho Minero-Energético",
     "Servicios Públicos",
   ],
-  backgroundImage: "/images/abogado_2.png?v=20260321",
+  backgroundImage: "/images/abogado_3.jpeg?v=20260321",
   ctaText: "Agenda una consulta jurídica estratégica",
   ctaHref: "#contacto",
 };
