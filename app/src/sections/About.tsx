@@ -132,7 +132,7 @@ export function About() {
             <div className="relative">
               <div className="aspect-[4/5] bg-gray-100 rounded-lg overflow-hidden">
                 <img
-                  src="/images/abogado.jpg"
+                  src="/images/abogado.jpeg"
                   alt="Hernan Morantes"
                   loading="lazy"
                   decoding="async"
@@ -241,7 +241,7 @@ export function About() {
               style={{ transitionDelay: '1000ms' }}
             >
               <p className="font-serif text-xl text-emerald-700 italic text-center">
-                &ldquo;La justicia es un servicio público, no un privilegio&rdquo;
+                &ldquo;La justicia es un derecho humano, no un privilegio&rdquo;
               </p>
               <p className="text-gray-500 mt-2 text-sm text-center">— Hernán Morantes</p>
             </div>

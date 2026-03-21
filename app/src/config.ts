@@ -104,7 +104,7 @@ export interface AboutConfig {
 export const aboutConfig: AboutConfig = {
   label: "Sobre Mí",
   heading: "Justicia con Estrategia y Propósito",
-  description: "El derecho no es para adornar estanterías. Es para ordenar el poder y proteger la vida. Convierto conflictos complejos en decisiones claras y soluciones con impacto social.",
+  description: "El derecho no es para adornar estanterías. Es para ordenar el poder y proteger la vida. Convierto conflictos complejos en decisiones claras y soluciones con impacto ambiental, economico y social.",
   mission: "Brindar asesoría y defensa jurídica rigurosa para proteger los derechos de personas y comunidades, fortaleciendo el Estado de Derecho en los ámbitos administrativo, constitucional, ambiental, minero-energético y de servicios públicos, con ética, pedagogía y litigio estratégico.",
   vision: "Ser una referencia nacional e internacional en defensa jurídica de alto impacto social y ambiental, reconocida por transformar conflictos legales complejos en decisiones justas, sostenibles y comprensibles, donde el derecho no solo resuelve casos, sino mejora la vida colectiva.",
   experienceValue: "11+",
@@ -115,10 +115,10 @@ export const aboutConfig: AboutConfig = {
     { value: "24h", label: "Respuesta Ágil" },
   ],
   images: [
-    { src: "/images/abogado.jpg", alt: "Hernan Morantes - Abogado" },
-    { src: "/images/abogado.jpg", alt: "Hernan Morantes - Profesional" },
-    { src: "/images/abogado.jpg", alt: "Hernan Morantes - Experiencia" },
-    { src: "/images/abogado.jpg", alt: "Hernan Morantes - Dedicación" },
+    { src: "/images/abogado.jpeg", alt: "Hernan Morantes - Abogado" },
+    { src: "/images/abogado.jpeg", alt: "Hernan Morantes - Profesional" },
+    { src: "/images/abogado.jpeg", alt: "Hernan Morantes - Experiencia" },
+    { src: "/images/abogado.jpeg", alt: "Hernan Morantes - Dedicación" },
   ],
 };
 
@@ -143,7 +143,7 @@ export interface ServicesConfig {
 export const servicesConfig: ServicesConfig = {
   label: "Servicios",
   heading: "Asesoría y litigio estratégico con propósito",
-  description: "No compito por volumen ni por estridencia, sino por criterio, estrategia y resultados con impacto social.",
+  description: "Trabajamos con criterio, estrategia y resultados con impacto social, ecónomico y ambiental.",
   services: [
     {
       iconName: "Scale",
@@ -151,11 +151,11 @@ export const servicesConfig: ServicesConfig = {
       description: "Análisis jurídico especializado con enfoque preventivo y visión territorial. Lenguaje claro sin sacrificar rigor técnico.",
       features: [
         "Análisis en derecho administrativo, ambiental, constitucional y minero-energético",
-        "Conceptos escritos y revisión de actos administrativos",
-        "Enfoque para comunidades, servidores públicos y veedurías",
+        "Conceptos escritos y revisión de proyectos de ley y actos administrativos",
+        "Enfoque para comunidades, servidores públicos, ONG's y veedurías",
         "Hoja de ruta concreta desde la primera asesoría"
       ],
-      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
+      image: "/images/consultoria.png",
     },
     {
       iconName: "Gavel",
@@ -163,8 +163,8 @@ export const servicesConfig: ServicesConfig = {
       description: "No es litigio por volumen, es litigio con propósito. Casos pensados para generar impacto, no solo sentencias.",
       features: [
         "Acciones constitucionales y contencioso-administrativas",
-        "Litigio en temas ambientales y servicios públicos",
-        "Uso de precedentes y prueba técnica",
+        "Litigio en temas ambientales y minero-enérgeticos",
+        "Litigio en servicios públicos",
         "Presentación rápida de acciones urgentes"
       ],
       image: "/images/litigio.jpeg",
@@ -175,9 +175,8 @@ export const servicesConfig: ServicesConfig = {
       description: "Talleres y capacitaciones que empoderan.",
       features: [
         "Formación jurídica aplicada con casos reales",
-        "Metodología pedagógica y ejemplos cotidianos",
-        "Enfoque en derechos, deberes y mecanismos de exigibilidad",
-        "Reducción de conflictos futuros"
+        "Metodología práctica y ejemplos cotidianos",
+        "Enfoque en mecanismos juridicos para la protección de derechos",
       ],
       image: "/images/educacion.png",
     },
@@ -188,8 +187,7 @@ export const servicesConfig: ServicesConfig = {
       features: [
         "Defensa de comunidades afectadas por proyectos extractivos",
         "Protección de los ecosistemas y el ambiente",
-        "Asesoría en derecho minero y energético",
-        "Litigio con impacto social real"
+        "Asesoría en derecho minero-energético y transición enérgetica",
       ],
       image: "/images/ambiental.jpeg",
     },
@@ -515,10 +513,11 @@ export const footerConfig: FooterConfig = {
     },
   ],
   socialLinks: [
-    { iconName: "Linkedin", href: "https://www.linkedin.com/in/hernan-morantes-9751872b8/", label: "LinkedIn" },
-    { iconName: "Instagram", href: "https://www.instagram.com/abogadohernanmorantes/tagged/", label: "Instagram" },
+    { iconName: "TikTok", href: "https://www.tiktok.com/@hernanmorantes", label: "TikTok" },
+     { iconName: "Youtube", href: "https://www.youtube.com/@hernanmorantes3474", label: "Youtube" },
     { iconName: "Facebook", href: "https://www.facebook.com/profile.php?id=61587600744452", label: "Facebook" },
     { iconName: "X", href: "https://x.com/HernanMorantes", label: "X" },
+    { iconName: "Instagram", href: "https://www.instagram.com/abogadohernanmorantes/tagged/", label: "Instagram" },
   ],
   newsletterHeading: "Mantente informado",
   newsletterDescription: "Recibe actualizaciones jurídicas y nuevos kits directamente en tu correo solicitandolo por nuestros medios de comunicación.",

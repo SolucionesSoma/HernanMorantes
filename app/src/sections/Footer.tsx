@@ -1,17 +1,28 @@
-import { type MouseEvent } from 'react';
+import { type MouseEvent, type ComponentType } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { ArrowUpRight, Linkedin, Instagram, Facebook, X, Circle, type LucideIcon } from 'lucide-react';
+import { ArrowUpRight, Linkedin, Instagram, Facebook, X, Circle, Youtube } from 'lucide-react';
+import tiktok from '/icons/tiktok.svg';
 import { footerConfig } from '@/config';
 
-function getIcon(iconName: string): LucideIcon {
-  const icons: Record<string, LucideIcon> = {
+type SocialIconProps = {
+  className?: string;
+};
+
+const TikTokIcon = ({ className }: SocialIconProps) => (
+  <img src={tiktok} alt="" className={className} aria-hidden="true" />
+);
+
+const icons: Record<string, ComponentType<SocialIconProps>> = {
     Linkedin,
     Instagram,
     Facebook,
     X,
+    Youtube,
+    TikTok: TikTokIcon,
   };
 
+function getIcon(iconName: string): ComponentType<SocialIconProps> {
   return icons[iconName] || Circle;
 }
 

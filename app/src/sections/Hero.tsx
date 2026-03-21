@@ -222,7 +222,7 @@ export function Hero() {
         {heroConfig.subtitle && (
           <div
             className={cn(
-              'text-center transition-all duration-[1200ms] ease-out-quart',
+              'text-center transition-all duration-[1200ms] ease-out-quart pt-5',
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
             )}
             style={{ transitionDelay: '1000ms' }}
@@ -245,7 +245,8 @@ export function Hero() {
           )}
           style={{ transitionDelay: '600ms' }}
         >
-          <h1 className="text-[clamp(3rem,12vw,12rem)] font-black text-white tracking-[-0.04em] leading-[0.85]">
+          <h1 className="text-[clamp(2rem,10vw,12rem)] font-black text-white tracking-[-0.04em] leading-[0.85]">
+
             {/*text-[#059669] */}
             {heroConfig.name}
           </h1>
