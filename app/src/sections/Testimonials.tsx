@@ -112,7 +112,7 @@ export function Testimonials() {
             <div className="space-y-8">
               {/* Stars */}
               <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => (
+                {Array.from({ length: 5 }, (_unused: unknown, i: number) => (
                   <Star
                     key={i}
                     className={cn(

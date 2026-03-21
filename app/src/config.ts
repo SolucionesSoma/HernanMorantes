@@ -358,6 +358,37 @@ export interface TestimonialsConfig {
   testimonials: TestimonialItem[];
 }
 
+export const testimonialsConfig: TestimonialsConfig = {
+  label: "Testimonios",
+  heading: "Lo que dicen quienes han confiado en mi trabajo",
+  testimonials: [
+    {
+      quote: "El doctor Morantes no solo resolvió nuestro caso, nos enseñó a entender el derecho como herramienta de empoderamiento. Su pedagogía legal es excepcional.",
+      author: "María González",
+      role: "Líder Comunitaria",
+      company: "Veeduría Ciudadana del Agua",
+      image: "/images/abogado.jpg",
+      rating: 5,
+    },
+    {
+      quote: "Profesionalismo, rigor técnico y una respuesta ágil que nos permitió actuar antes de que el daño fuera irreversible. Exactamente lo que necesitábamos.",
+      author: "Carlos Ramírez",
+      role: "Presidente",
+      company: "Junta de Acción Comunal",
+      image: "/images/abogado.jpg",
+      rating: 5,
+    },
+    {
+      quote: "Finalmente un abogado que habla claro, sin lenguaje críptico. Nos dio tranquilidad y resultados concretos en un caso que parecía perdido.",
+      author: "Ana Patricia López",
+      role: "Servidora Pública",
+      company: "Alcaldía Municipal",
+      image: "/images/abogado.jpg",
+      rating: 5,
+    },
+  ],
+};
+
 
 
 // ───────────────────────────────────────────────────────────────────────────
