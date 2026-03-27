@@ -369,6 +369,15 @@
   background: #333;
 }
 
+/* Local thin scrollbar for horizontal impact counter */
+.impact-scrollbar-thin::-webkit-scrollbar {
+  height: 5px !important;
+}
+
+.impact-scrollbar-thin::-webkit-scrollbar:horizontal {
+  height: 5px !important;
+}
+
 /* Falling Leaves Animation */
 @keyframes fall {
   0% {

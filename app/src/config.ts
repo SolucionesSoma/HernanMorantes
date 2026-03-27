@@ -238,7 +238,6 @@ export const legalKitsConfig: LegalKitsConfig = {
       category: "Derecho del Consumidor",
       image: "https://guialegal.com/wp-content/uploads/2021/03/productos-defectuosos-1400x1000.jpg",
       driveLink: "https://drive.google.com/drive/folders/1SbAkUZYxz8IFaRgYTB75zAw9Cl4MfRLp?usp=drive_link",
-      featured: true,
     },
     {
       id: "kit-2",
@@ -247,6 +246,7 @@ export const legalKitsConfig: LegalKitsConfig = {
       category: "Derecho Ambiental",
       image: "https://www.oemais.com/es/efectos-del-ruido-en-la-salud_img62130t1.jpg",
       driveLink: "https://drive.google.com/drive/mobile/folders/1o9tSNNBf16nUYsdCg4ZyE0MgIdbUO5bQ?usp=drive_link",
+      featured: true,
     },
     {
       id: "kit-3",

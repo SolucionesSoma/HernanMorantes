@@ -10,6 +10,7 @@ import { CTA } from '@/sections/CTA';
 import { Footer } from '@/sections/Footer';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { usePageLoad } from '@/hooks/usePageLoad';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const { showOverlay } = usePageLoad(120);
@@ -18,6 +19,7 @@ function App() {
     <div className="min-h-screen bg-white">
       {/* Page Load Overlay */}
       <PageOverlay isVisible={showOverlay} />
+      <Analytics />
       
       {/* Navigation */}
       <Navigation />
